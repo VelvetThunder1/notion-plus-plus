@@ -18,8 +18,9 @@ export function RadialChart({chartData, dataKey}) {
     console.log(dataKey)
 
     const chartConfig = {
-        dataKey: {
+        [dataKey]: {
           label: dataKey,
+          color: "hsl(var(--chart-1))"
         },
       } satisfies ChartConfig
 
@@ -43,7 +44,7 @@ export function RadialChart({chartData, dataKey}) {
                 className="first:fill-muted last:fill-background"
                 polarRadius={[86, 74]}
                 />
-                <RadialBar dataKey={dataKey} background cornerRadius={10} />
+                <RadialBar dataKey={dataKey} background cornerRadius={10} fill={`var(--color-${dataKey})`}/>
                 <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
                 <Label
                     content={({ viewBox }) => {
