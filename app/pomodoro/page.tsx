@@ -1,28 +1,11 @@
 "use client"
 
-import { useState } from "react"
-import { RadialChart } from "@/components/radial-chart"
-import { Button } from "@/components/ui/button"
+import { PomodoroTimer } from "@/components/timer"
 
 export default function ProgressDemo() {
-    const [timeVal, setTime] = useState(5)
-
-    const chartData = [
-        { time: timeVal}
-    ]
-
     return (
-        <div className="flex flex-col">
-            <RadialChart chartData={chartData} dataKey="time"></RadialChart>
-            <div className="flex justify-center p-5">
-                <Button className="mx-5">Start</Button>
-                <Button className="mx-5">Pause</Button>
-                <Button className="mx-5">Reset</Button>
-            </div>
-            <div className="flex justify-center p-5">
-                <Button className="mx-5" onClick={() => setTime(5)}>Break</Button>
-                <Button className="mx-5" onClick={() => setTime(25)}>Work</Button>
-            </div>
+        <div className="flex justify-center">
+            <PomodoroTimer/>
         </div>
     )
 }
