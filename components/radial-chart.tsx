@@ -17,7 +17,7 @@ export function RadialChart({ chartData, mode }: { chartData: any[], mode: 'work
   const chartConfig = {
     time: {
       label: "time",
-      color: mode === 'work' ? "hsl(210, 100%, 50%)" : "hsl(0, 100%, 50%)"
+      color: mode === 'work' ? "hsl(var(--chart-2))" : "hsl(var(--chart-5))"
     },
   } satisfies ChartConfig
 
@@ -49,7 +49,7 @@ export function RadialChart({ chartData, mode }: { chartData: any[], mode: 'work
             dataKey="time" 
             background 
             cornerRadius={10} 
-            fill={mode === 'work' ? "hsl(210, 100%, 50%)" : "hsl(0, 100%, 50%)"}
+            fill={mode === 'work' ? "hsl(var(--chart-2))" : "hsl(var(--chart-5))"}
             maxAngle={360}
           />
           <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
