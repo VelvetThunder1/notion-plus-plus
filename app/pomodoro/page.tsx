@@ -14,7 +14,12 @@ export default function ProgressDemo() {
     return (
         <div className="flex flex-col">
             <RadialChart chartData={chartData} dataKey="time"></RadialChart>
-            <div className="flex justify-center">
+            <div className="flex justify-center p-5">
+                <Button className="mx-5">Start</Button>
+                <Button className="mx-5">Pause</Button>
+                <Button className="mx-5">Reset</Button>
+            </div>
+            <div className="flex justify-center p-5">
                 <Button className="mx-5" onClick={() => setTime(5)}>Break</Button>
                 <Button className="mx-5" onClick={() => setTime(25)}>Work</Button>
             </div>

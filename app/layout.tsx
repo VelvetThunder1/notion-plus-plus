@@ -3,7 +3,7 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import "./globals.css";
 import { AppSidebar } from "@/components/app-sidebar";
 import { ThemeProvider } from "@/components/theme-provider"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { ModeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: "Notion++",
@@ -30,7 +30,7 @@ export default function RootLayout({
                   <SidebarTrigger className="p-5"/>
                   {children}
                   <div className="absolute bottom-5 right-5">
-                    <ThemeToggle />
+                    <ModeToggle />
                   </div>
                 </main>
             </SidebarProvider>
