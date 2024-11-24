@@ -50,7 +50,6 @@ export function RadialChart({ chartData, mode }: { chartData: any[], mode: 'work
             background 
             cornerRadius={10} 
             fill={mode === 'work' ? "hsl(var(--chart-2))" : "hsl(var(--chart-5))"}
-            maxAngle={360}
           />
           <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
             <Label
