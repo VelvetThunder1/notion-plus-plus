@@ -13,12 +13,14 @@ import { NavMain } from "@/components/nav-main"
 import { NavTools } from "@/components/nav-tools"
 import { NavUser } from "@/components/nav-user"
 import { TeamSwitcher } from "@/components/team-switcher"
+import { DatePicker } from "@/components/date-picker"
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
+  SidebarSeparator
 } from "@/components/ui/sidebar"
 
 const pages = {
@@ -123,11 +125,14 @@ const pages = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
-      <SidebarHeader>
+      <SidebarHeader className="border-sidebar-border border-b">
         <TeamSwitcher teams={pages.teams} />
       </SidebarHeader>
       <SidebarContent>
+        <DatePicker></DatePicker>
+        <SidebarSeparator className="mx-0" />
         <NavMain items={pages.navMain} />
+        <SidebarSeparator className="mx-0" />
         <NavTools tools={pages.tools} />
       </SidebarContent>
       <SidebarFooter>
