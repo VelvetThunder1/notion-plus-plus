@@ -23,7 +23,7 @@ export function NavTools({
   }[]
 }) {
   return (
-    <SidebarGroup className="group-data-[collapsible=icon]:hidden">
+    <SidebarGroup>
       <SidebarGroupLabel>Tools</SidebarGroupLabel>
       <SidebarMenu>
         {tools.map((item) => (
