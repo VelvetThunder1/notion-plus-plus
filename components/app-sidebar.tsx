@@ -7,7 +7,8 @@ import {
   GalleryVerticalEnd,
   Timer,
   Calendar,
-  Folder
+  Folder,
+  ListCheck
 } from "lucide-react"
 import { NavMain } from "@/components/nav-main"
 import { NavTools } from "@/components/nav-tools"
@@ -118,6 +119,11 @@ const pages = {
       name: "Calendar",
       url: "/calendar",
       icon: Calendar,
+    },
+    {
+      name: "Todo",
+      url: "/todo",
+      icon: ListCheck,
     },
   ],
 }
